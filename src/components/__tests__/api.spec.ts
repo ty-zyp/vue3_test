@@ -44,11 +44,11 @@ describe('mock api', () => {
 // });
 
 
-beforeEach(async (context) => {
-  // extend context
-  context.foo = 'bar'
-})
+// beforeEach(async (context) => {
+//   // extend context
+//   context.foo = 'bar'
+// })
 
-it('should work', ({ foo }) => {
-  console.log(foo) // 'bar'
-})
+// it('should work', ({ foo }) => {
+//   console.log(foo) // 'bar'
+// })
