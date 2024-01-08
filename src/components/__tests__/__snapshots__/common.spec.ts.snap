@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`api-test > common快照-1 1`] = `
+{
+  "coolness": 100,
+  "name": "lisi",
+  "project": [
+    "c",
+    "d",
+  ],
+  "userName": "ls",
+}
+`;

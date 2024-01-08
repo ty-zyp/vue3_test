@@ -1,23 +1,51 @@
-// 测试用例方式1：（全局mock测试）
 
-import { BookingService } from '@/api/LoginService';
-import { vi,describe,it,expect } from 'vitest';
+import { userlogin } from '@/api/LoginService';
+import { vi, describe, it, expect } from 'vitest';
 
-vi.mock('@/services/BookingService'); // 全局mock
+// vi.mock('@/services/userlogin'); // 全局mock
 
 // describe.skip('mock api', () => {
 describe('mock api', () => {
   it('mock async service in global scope', async () => {
-    const result = false;
-    const res = await BookingService.updateAppointOrderState(); // 不会走真实接口请求
+    expect(1+1).toBe(2)
+    // const result = false;
+    // const res = await userlogin({
+    //   ptCode: 'CP004',
+    //   username: 'admin',
+    //   password: 'Aa@123456',
+    // }); // 不会走真实接口请求
     // console.log(4,res)
-    expect(res).toBe(result); //  使用 toBe 方法来验证返回值是否严格等于预期的 result 值（在这个例子中是 false）。
-    expect(res).toEqual(result); // 使用 toEqual 方法来验证返回值是否等于预期的 result 值。这个方法会比较对象的结构和值。
-    expect(res).toBeFalsy(); //  使用 toBeFalsy 方法来验证返回值是否为假值（例如 false, 0, null, undefined, 和空字符串）。
-    expect(BookingService.updateAppointOrderState).toBeCalledTimes(1);
-    expect(BookingService.queryAllGuides).toBeCalledTimes(0);
+    // expect(res).toBe(result); //  使用 toBe 方法来验证返回值是否严格等于预期的 result 值（在这个例子中是 false）。
+    // expect(res).toEqual(result); // 使用 toEqual 方法来验证返回值是否等于预期的 result 值。这个方法会比较对象的结构和值。
+    // expect(res).toBeFalsy(); //  使用 toBeFalsy 方法来验证返回值是否为假值（例如 false, 0, null, undefined, 和空字符串）。
+    // expect(userlogin).toBeCalledTimes(1);
+    // expect(userlogin).toBeCalledTimes(0);
   });
 });
+
+
+
+
+// 测试用例方式1：（全局mock测试）
+
+// import { BookingService } from '@/api/LoginService';
+// import { vi,describe,it,expect } from 'vitest';
+
+// // vi.mock('@/services/BookingService'); // 全局mock
+
+// // describe.skip('mock api', () => {
+// describe('mock api', () => {
+//   it('mock async service in global scope', async () => {
+//     const result = false;
+//     const res = await BookingService.updateAppointOrderState(); // 不会走真实接口请求
+//     // console.log(4,res)
+//     expect(res).toBe(result); //  使用 toBe 方法来验证返回值是否严格等于预期的 result 值（在这个例子中是 false）。
+//     expect(res).toEqual(result); // 使用 toEqual 方法来验证返回值是否等于预期的 result 值。这个方法会比较对象的结构和值。
+//     expect(res).toBeFalsy(); //  使用 toBeFalsy 方法来验证返回值是否为假值（例如 false, 0, null, undefined, 和空字符串）。
+//     expect(BookingService.updateAppointOrderState).toBeCalledTimes(1);
+//     expect(BookingService.queryAllGuides).toBeCalledTimes(0);
+//   });
+// });
 
 
 

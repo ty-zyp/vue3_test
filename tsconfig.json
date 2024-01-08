@@ -45,7 +45,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "types":["vitest/globals"]
+    // "types":["vitest/globals"] // 全局引入 vitest 位置二
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue","src/components/HelloWorld.vue"],
   // "references": [{ "path": "./tsconfig.node.json" }]

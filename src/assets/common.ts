@@ -12,3 +12,36 @@ export function compose(...funcs:Array<Function>){
     },val)
   }
 }
+interface User{
+  userName: string,
+  name: string,
+  project: string[],
+  coolness?:number
+}
+
+
+const findUser = (userName:string): User | undefined =>{
+  const users:User[] = [{
+      userName: 'zs',
+      name: 'zhangsan',
+      project:['a','b']
+    },
+    {
+      userName: 'ls',
+      name: 'lisi',
+      project:['c','d']
+    }
+  ]
+  return users.find(user => {
+    return user.userName === userName;
+  })
+}
+
+export const loadUserData = async (userName:string) => {
+  const user = await findUser(userName);
+  if (!user) {
+    throw new Error('no user found');
+  }
+  user.coolness = userName === 'ls' ? 100 : -1;
+  return user;
+}

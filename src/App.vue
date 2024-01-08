@@ -3,7 +3,9 @@ import {ref} from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import Notification from './components/Notification.vue'
-import {userlogin} from '../src/api/LoginService'
+import Axios from './components/Axios.vue'
+import { userlogin } from './api/LoginService'
+
 
 const data = ref({
   type:'',
@@ -34,6 +36,8 @@ const close = () => {
     message:''
   }
 }
+
+
 const login = () => {
   userlogin({
     ptCode: 'CP004',
@@ -47,9 +51,9 @@ const login = () => {
 
 <template>
   <header>
-    <button @click="login">登录</button>
+    <Axios></Axios>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
+    <button @click="login">登录接口</button>
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
       <button @click="success">success</button>

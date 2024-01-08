@@ -2,7 +2,7 @@ import axios from 'axios'
 import qs from 'qs'
 import abort from './abort'
 // import { SignOut2, SignOut3 } from '@/composables/toolApi'
-
+import {ElMessage} from 'element-plus'
 
 // 设置超时
 axios.defaults.timeout = 3 * 60 * 1000
