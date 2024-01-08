@@ -3,6 +3,7 @@
 exports[`api-test > common快照-1 1`] = `
 {
   "coolness": 100,
+  "favoriteFood": "mifan",
   "name": "lisi",
   "project": [
     "c",

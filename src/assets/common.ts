@@ -16,7 +16,8 @@ interface User{
   userName: string,
   name: string,
   project: string[],
-  coolness?:number
+  coolness?: number,
+  favoriteFood?:string
 }
 
 
@@ -24,12 +25,14 @@ const findUser = (userName:string): User | undefined =>{
   const users:User[] = [{
       userName: 'zs',
       name: 'zhangsan',
-      project:['a','b']
+      project: ['a', 'b'],
+      favoriteFood:'nodes'
     },
     {
       userName: 'ls',
       name: 'lisi',
-      project:['c','d']
+      project: ['c', 'd'],
+      favoriteFood:'mifan'
     }
   ]
   return users.find(user => {

@@ -47,7 +47,8 @@ describe('api-test', () => {
       userName: 'ls',
       name: 'lisi',
       project: ['c', 'd'],
-      coolness:100
+      coolness: 100,
+      favoriteFood: 'mifan'
     })
   })
   test('common 2', async () => {
@@ -65,7 +66,7 @@ describe('api-test', () => {
   test('common 4', async () => {
     expect(async () => {
       await loadUserData('ss')
-    }).rejects.toThrowError('user'); // 括号内容只要存在于抛出的内容上及测试通过，如 user 在 no user found 中能找到
+    }).rejects.toThrowError('no user found'); // 括号内容只要存在于抛出的内容上及测试通过，如 user 在 no user found 中能找到
   })
   test('common快照-1', async () => {
     const result = await loadUserData('ls');
