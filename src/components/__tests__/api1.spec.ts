@@ -4,7 +4,7 @@ import { mount, flushPromises } from '@vue/test-utils'
 import axios from 'axios';
 import Axios from '../Axios.vue'
 
-console.log(0,Axios)
+// console.log(0,Axios)
 
 describe('axios-tets', () => {
   it('tets1', async () => {

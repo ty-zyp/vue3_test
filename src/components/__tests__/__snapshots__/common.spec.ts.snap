@@ -9,6 +9,7 @@ exports[`api-test > common快照-1 1`] = `
     "c",
     "d",
   ],
+  "snacks": false,
   "userName": "ls",
 }
 `;

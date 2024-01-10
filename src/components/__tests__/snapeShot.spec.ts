@@ -2,7 +2,7 @@ import { test,it, expect } from 'vitest';
 import HelloWorld from '../HelloWorld.vue' //src\components\HelloWorld.vue
 
 it('toUpperCase', async () => {
-  console.log('HelloWorld',HelloWorld)
+  // console.log('HelloWorld',HelloWorld)
   // const str = 'foobar';
   // const result = str.toLocaleUpperCase()
   // expect(result).toMatchSnapshot() // 此测试在第一次运行时，Vitest 会创建一个快照文件
@@ -10,6 +10,5 @@ it('toUpperCase', async () => {
   
   // const result = mount(HelloWorld);
   const result = HelloWorld;
-  await expect(result).toMatchFileSnapshot('../HelloWorld1.vue') // 会以文件的方式存储
-
+  await expect(result).toMatchFileSnapshot('../__snapshots__/HelloWorld1.json') // 会以文件的方式存储  
 });

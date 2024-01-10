@@ -329,6 +329,8 @@ export const require = (option) => {
       else
         reject(rej.message)
     })
+  }).catch(err => {
+    console.log(err)
   })
 }
 

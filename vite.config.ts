@@ -5,6 +5,27 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    esbuild: {
+      drop: ['console', 'debugger'],
+    },
+    chunkSizeWarningLimit: 1500,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('components'))
+            return 'components'
+
+          if (id.includes('pages'))
+            return 'pages'
+
+          if (id.includes('layouts'))
+            return 'layouts'
+        },
+      },
+    },
+    cssCodeSplit: false,
+  },
   plugins: [
     vue(),
   ],
