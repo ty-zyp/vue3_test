@@ -5,7 +5,7 @@ export default mergeConfig(
   viteConfig,
   defineConfig({
     define: {
-      'import.meta.vitest': 'undefined', 
+      'import.meta.vitest': 'undefined', // 源码内联测试配置
     }, 
     test: {
       // 启用基准测试模式  
